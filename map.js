@@ -117,7 +117,7 @@ function handleDotClick(city, dotElement) {
             setNewTarget();
         }, 300); 
     } else {
-        message.textContent = "Źle babo";
+        message.textContent = "Źle";
         message.style.color = "red";
     }
 }
