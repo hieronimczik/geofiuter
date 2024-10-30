@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaznacz odpowiednie miejsce na mapie</title>
+    <link rel="stylesheet" href="mapka.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 id="message"></h1>
+            <div class="map-container">
+                <img src="mapka.jpg" alt="Mapa" id="map">
+                <div id="dots-container"></div>
+            </div>
+        </div>
+        <div class="btn" id="niziny" onclick="chooseLocations('niziny')">Niziny</div>
+        <div class="btn" id="gory" onclick="chooseLocations('gory')">Góry</div>
+        <div class="btn" id="wyzyny" onclick="chooseLocations('wyzyny')">Wyżyny</div>
+    </div>
+    <script src="map.js"></script>
+</body>
+</html>
