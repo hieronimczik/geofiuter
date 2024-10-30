@@ -82,15 +82,22 @@ function setNewTarget() {
 
 
 function addDots() {
+    const mapElement = document.getElementById('map');
+    const mapWidth = mapElement.clientWidth;
+    const mapHeight = mapElement.clientHeight;
+
+    
+    const originalWidth = 967; 
+    const originalHeight = 659; 
+
     for (const [city, area] of Object.entries(locations)) {
         const dot = document.createElement('div');
         dot.classList.add('dot');
-        dot.id = city; 
+        dot.id = city;
 
-
-        const centerX = (area.xMin + area.xMax) / 2;
-        const centerY = (area.yMin + area.yMax) / 2;
-
+        
+        const centerX = (area.xMin / originalWidth) * mapWidth;
+        const centerY = (area.yMin / originalHeight) * mapHeight;
 
         dot.style.left = `${centerX}px`;
         dot.style.top = `${centerY}px`;
